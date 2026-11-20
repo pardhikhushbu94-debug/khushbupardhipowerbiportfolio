@@ -1,0 +1,141 @@
+/* Khushbu Pardhi - Portfolio Custom Styles */
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --pbi-gold: #F2C811;
+  --pbi-gold-dark: #D4A800;
+  --pbi-blue: #118DFF;
+  --pbi-navy: #0B2545;
+  --pbi-teal: #12C4B7;
+  --pbi-orange: #F37021;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .glass-card {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.light .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Subtle Animated Gradient Border */
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(242, 200, 17, 0.4), rgba(17, 141, 255, 0.4), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #4B5563;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Accent Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F2C811 0%, #F59E0B 50%, #F97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-bi {
+  background: linear-gradient(135deg, #118DFF 0%, #12C4B7 50%, #F2C811 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+.pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Chart bar animation */
+@keyframes growUp {
+  from {
+    height: 0%;
+  }
+  to {
+    height: var(--bar-height);
+  }
+}
+.animate-bar {
+  animation: growUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Floating animation for badge pills */
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.float-badge {
+  animation: floatUp 5s ease-in-out infinite;
+}
+.float-badge-delay {
+  animation: floatUp 5s ease-in-out 2.5s infinite;
+}
+
+/* Interactive Dashboard active tab */
+.pbi-tab.active {
+  background-color: rgba(242, 200, 17, 0.15);
+  border-color: #F2C811;
+  color: #F2C811;
+  font-weight: 600;
+}
