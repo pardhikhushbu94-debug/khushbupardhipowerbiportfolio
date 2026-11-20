@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Khushbu Pardhi - Senior Power BI Developer Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      line-height: 1.4;
+      font-size: 9.5pt;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 4mm 2mm;
+      page-break-after: always;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    /* Header Section */
+    .header {
+      border-bottom: 2px solid #0f2d59;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-info {
+      flex: 1;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f2d59;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+    .title-role {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #b45309;
+      margin-top: 1px;
+      letter-spacing: 0.5px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+      font-size: 8.5pt;
+      color: #475569;
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-item a {
+      color: #0f2d59;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+      color: #b45309;
+    }
+    .header-badge {
+      text-align: right;
+      padding: 6px 12px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+    }
+    .header-badge .badge-text {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #0f2d59;
+      display: block;
+    }
+    .header-badge .badge-sub {
+      font-size: 7.5pt;
+      color: #15803d;
+      font-weight: 600;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 800;
+      color: #0f2d59;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: #e2e8f0;
+      margin-left: 10px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 8.8pt;
+      color: #334155;
+      line-height: 1.45;
+      text-align: justify;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 16px;
+      font-size: 8.5pt;
+    }
+    .skill-category {
+      display: flex;
+      gap: 4px;
+      line-height: 1.35;
+    }
+    .skill-label {
+      font-weight: 700;
+      color: #0f2d59;
+      white-space: nowrap;
+      min-width: 110px;
+    }
+    .skill-values {
+      color: #334155;
+    }
+
+    /* Experience & Projects */
+    .job-item, .project-item {
+      margin-bottom: 8px;
+    }
+    .job-header, .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.5pt;
+    }
+    .job-title, .project-title {
+      font-weight: 700;
+      color: #0f2d59;
+    }
+    .job-company {
+      font-weight: 600;
+      color: #b45309;
+    }
+    .job-meta, .project-domain {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #64748b;
+    }
+    .environment-bar {
+      font-size: 8pt;
+      color: #475569;
+      background: #f8fafc;
+      border-left: 3px solid #0f2d59;
+      padding: 2px 6px;
+      margin: 3px 0;
+      font-weight: 500;
+    }
+    .environment-bar strong {
+      color: #0f2d59;
+    }
+
+    /* Bullet Lists */
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 3px;
+    }
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 2.5px;
+      font-size: 8.6pt;
+      color: #334155;
+      line-height: 1.38;
+    }
+    ul.bullet-list li::before {
+      content: '▪';
+      position: absolute;
+      left: 2px;
+      color: #b45309;
+      font-size: 9pt;
+      top: -0.5px;
+    }
+    ul.bullet-list li strong {
+      color: #0f2d59;
+    }
+
+    /* Education */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 8.8pt;
+    }
+    .edu-degree {
+      font-weight: 700;
+      color: #0f2d59;
+    }
+    .edu-school {
+      color: #475569;
+      font-weight: 500;
+    }
+    .edu-year {
+      font-weight: 700;
+      color: #64748b;
+    }
+
+    /* Strengths Pill Tags */
+    .strengths-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .strength-tag {
+      font-size: 8pt;
+      font-weight: 600;
+      padding: 2px 8px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      color: #0f2d59;
+    }
+
+    /* Footer Pagination */
+    .resume-footer {
+      margin-top: 8px;
+      padding-top: 4px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: #94a3b8;
+    }
+    .resume-footer a {
+      color: #0f2d59;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       PAGE 1
+       ======================================================================== -->
+  <div class="page">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="header-info">
+        <h1 class="name">Khushbu Pardhi</h1>
+        <div class="title-role">Senior Power BI Developer | 4+ Years BI Engineering (9+ Years Analytical Journey)</div>
+        <div class="contact-bar">
+          <span class="contact-item">📞 <a href="tel:+919225309578">+91 9225309578</a></span>
+          <span class="contact-item">✉️ <a href="mailto:pardhikhushbu94@gmail.com">pardhikhushbu94@gmail.com</a></span>
+          <span class="contact-item">🌐 <a href="https://pardhikhushbu94-debug.github.io/khushbupardhipowerbiportfolio/" target="_blank">Live Portfolio</a></span>
+          <span class="contact-item">💼 <a href="https://www.linkedin.com/in/khushbu-pardhi/" target="_blank">LinkedIn</a></span>
+          <span class="contact-item">💻 <a href="https://github.com/pardhikhushbu94-debug" target="_blank">GitHub</a></span>
+          <span class="contact-item">📍 India (Open to Remote / Hybrid)</span>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="badge-text">Power BI Specialist</span>
+        <span class="badge-sub">● Available for Hire</span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        <strong>Power BI Developer with 4+ years of dedicated BI experience</strong> architecting high-performance dashboards, star-schema semantic models, and automated enterprise reporting solutions across retail, finance, and workforce operations. Expert in <strong>Power BI Desktop &amp; Service, DAX (Time Intelligence, Filter Context), Power Query (M), SQL Server, Row-Level Security (RLS)</strong>, and on-premises gateway configuration. Uniquely backed by <strong>5+ years of prior US Mortgage Underwriting experience</strong>, bringing deep expertise in financial audits, risk indicators, reconciliation integrity, and executive data governance. Proven track record converting complex multi-million dollar business requirements into decision-ready visual systems.
+      </p>
+    </section>
+
+    <!-- Core Skills Matrix -->
+    <section>
+      <h2 class="section-title">Core Technical Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <span class="skill-label">BI &amp; Visualization:</span>
+          <span class="skill-values">Power BI Desktop &amp; Service, Drill-Through, Bookmarks, Tooltips, KPI Scorecards, Matrix Visuals</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Data Modelling:</span>
+          <span class="skill-values">Star Schema, Snowflake Schema, Relationships (1:*, *:1), Calculated Tables, Date Dimensions</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Analytics &amp; DAX:</span>
+          <span class="skill-values">CALCULATE, Time Intelligence (YTD/QTD/MTD), Measures, Variance, Cohort &amp; Trend Analysis</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Data Prep &amp; ETL:</span>
+          <span class="skill-values">Power Query (M), Data Profiling, Type Casting, Merge/Append, Query Folding, Dataflows</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Databases &amp; SQL:</span>
+          <span class="skill-values">SQL Server, MySQL, Relational Joins, Views, Stored Procedures, Excel/CSV Consolidation</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Governance &amp; Service:</span>
+          <span class="skill-values">Row-Level Security (RLS), Workspace Admin, App Deployment, Scheduled Refresh, Data Gateways</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Delivery &amp; Agile:</span>
+          <span class="skill-values">Requirement Discovery, UAT, Stakeholder Demos, Agile/Scrum Sprints, Jira, Git, MS Teams</span>
+        </div>
+        <div class="skill-category">
+          <span class="skill-label">Mortgage &amp; Risk:</span>
+          <span class="skill-values">Conventional Loans, Income/Assets Audit, DTI &amp; LTV Ratios, Compliance, Title &amp; Appraisal Analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <!-- Job 1 -->
+      <article class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Power BI Developer</span> &nbsp;|&nbsp; 
+            <span class="job-company">Dhandhania Infotech</span>
+          </div>
+          <span class="job-meta">January 2022 — March 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Stakeholder &amp; KPI Leadership:</strong> Partnered with C-suite and department leads to translate operational business questions into governed Power BI dashboards and executive KPI scorecards.</li>
+          <li><strong>Semantic Data Modeling:</strong> Architected scalable, reusable star-schema data models and DAX measures for revenue, margin %, budget variance, inventory ageing, employee attrition, and SLA reporting.</li>
+          <li><strong>ETL &amp; Data Pipeline Engineering:</strong> Built automated Power Query (M) transformations and SQL datasets connecting SQL Server, Excel, CSV, and ERP extracts; enforced automated data-quality checks.</li>
+          <li><strong>Power BI Service Administration:</strong> Configured workspaces, published production apps, automated scheduled refreshes, configured on-premises gateways, and implemented dynamic Row-Level Security (RLS).</li>
+          <li><strong>Performance Optimization:</strong> Accelerated report rendering through measure optimization, reducing high-cardinality fields, index tuning, and maximizing query folding in Power Query.</li>
+          <li><strong>Agile Collaboration &amp; User Training:</strong> Led sprint demos, supported user acceptance testing (UAT), authored technical runbooks, and eliminated manual reporting bottlenecks across teams.</li>
+        </ul>
+      </article>
+
+      <!-- Job 2 -->
+      <article class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">US Mortgage Underwriter</span> &nbsp;|&nbsp; 
+            <span class="job-company">Dhandhania Infotech</span>
+          </div>
+          <span class="job-meta">October 2016 — December 2021</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Financial Risk &amp; Compliance Auditing:</strong> Conducted comprehensive underwriting analysis of conventional US mortgage loans in compliance with Fannie Mae and Freddie Mac guidelines.</li>
+          <li><strong>Financial Statement Scrutiny:</strong> Evaluated borrower income, assets, liabilities, credit scores, debt-to-income (DTI) and loan-to-value (LTV) ratios, appraisals, and title commitments with zero tolerance for discrepancies.</li>
+          <li><strong>Stakeholder Operations:</strong> Coordinated with loan processors and senior credit officers to resolve documentation defects, issued loan conditions, and maintained top-tier quality scores under strict SLAs.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Selected Power BI Projects (Start on Page 1) -->
+    <section>
+      <h2 class="section-title">Selected Enterprise Power BI Projects</h2>
+
+      <!-- Project 1 -->
+      <article class="project-item">
+        <div class="project-header">
+          <span class="project-title">Retail Sales &amp; Inventory Intelligence Dashboard</span>
+          <span class="project-domain">Retail &amp; FMCG Distribution</span>
+        </div>
+        <div class="environment-bar">
+          <strong>Environment:</strong> Power BI Desktop, DAX, Power Query (M), SQL Server, Excel, Power BI Service
+        </div>
+        <ul class="bullet-list">
+          <li>Developed an enterprise end-to-end dashboard tracking gross revenue, profit margins, target attainment, product/category performance, regional trends, stock ageing, and stockout reorder risks.</li>
+          <li>Formulated star-schema architecture and time-intelligence DAX measures for MTD, QTD, YTD, YoY variance, 90-day rolling averages, and category contribution percentages.</li>
+          <li>Designed synchronized slicers, bookmarks, drill-through paths down to transaction-level receipts, and automated daily refresh, reducing manual reporting time by 75%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="resume-footer">
+      <span>Khushbu Pardhi — Senior Power BI Developer</span>
+      <span>Live Portfolio: <a href="https://pardhikhushbu94-debug.github.io/khushbupardhipowerbiportfolio/">pardhikhushbu94-debug.github.io/khushbupardhipowerbiportfolio/</a></span>
+      <span>Page 1 of 2</span>
+    </div>
+
+  </div>
+
+  <!-- ========================================================================
+       PAGE 2
+       ======================================================================== -->
+  <div class="page">
+    
+    <!-- Continued Projects -->
+    <section>
+      <h2 class="section-title">Selected Enterprise Power BI Projects (Continued)</h2>
+
+      <!-- Project 2 -->
+      <article class="project-item">
+        <div class="project-header">
+          <span class="project-title">Financial Performance &amp; Budget Variance Analytics</span>
+          <span class="project-domain">Corporate Finance &amp; Professional Services</span>
+        </div>
+        <div class="environment-bar">
+          <strong>Environment:</strong> Power BI Desktop, DAX, Power Query (M), SQL, Excel, Power BI Service, Row-Level Security (RLS)
+        </div>
+        <ul class="bullet-list">
+          <li>Built management P&amp;L and executive reporting dashboards analyzing revenue, operating costs, EBITDA-style margins, Accounts Receivable (AR) ageing cohorts, budget vs actuals, and forecasts.</li>
+          <li>Engineered complex DAX calculations for Actual, Budget, Forecast, variance amount &amp; percentage deviations, and conditional status indicators using a reusable conformed date dimension.</li>
+          <li>Implemented dynamic Row-Level Security (RLS) restricting sensitive cost center and divisional data by business unit controller, fully reconciling totals with finance audit reports.</li>
+          <li>Enabled finance leadership to identify departmental overspend and cash collection risks 2 weeks earlier through variance waterfall visuals and configurable exception thresholds.</li>
+        </ul>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-item">
+        <div class="project-header">
+          <span class="project-title">Workforce &amp; Attrition Intelligence System</span>
+          <span class="project-domain">HR &amp; Shared Services Operations</span>
+        </div>
+        <div class="environment-bar">
+          <strong>Environment:</strong> Power BI Desktop, DAX, Power Query (M), SQL Server, Power BI Service
+        </div>
+        <ul class="bullet-list">
+          <li>Engineered interactive workforce dashboards tracking active headcount, hiring pipelines, exits, voluntary/involuntary attrition, average tenure, diversity mix, and department workforce distributions.</li>
+          <li>Authored custom Power Query (M) data-cleansing recipes for employee master logs, automatically resolving duplicate records, inconsistent department hierarchies, and date formatting anomalies.</li>
+          <li>Formulated attrition rate DAX measures with multi-level drill-down by department, grade band, tenure cohort, and location, while securing sensitive employee compensation through role-based access.</li>
+          <li>Automated monthly HR review reporting packs, eliminating repetitive spreadsheet preparation and ensuring consistent metrics across reporting cycles.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Key Achievements -->
+    <section>
+      <h2 class="section-title">Key Professional Achievements</h2>
+      <ul class="bullet-list">
+        <li><strong>Enterprise BI Modernization:</strong> Replaced disparate, error-prone manual Excel spreadsheets with governed, automated Power BI semantic models and standardized KPI definitions.</li>
+        <li><strong>75%+ Efficiency Gain:</strong> Automated manual consolidation and reporting pipelines, reducing weekly executive reporting prep from 25+ hours to instant automated refreshes.</li>
+        <li><strong>100% Executive Data Trust:</strong> Instituted rigorous source-to-report reconciliation, anomaly checks, and documented metric ownership that eliminated data discrepancy complaints.</li>
+        <li><strong>Usability &amp; Self-Service Adoption:</strong> Standardized visual design systems, navigation buttons, contextual tooltips, and drill-through paths to accelerate self-service adoption across business teams.</li>
+        <li><strong>Stakeholder Excellence:</strong> Recognized by management for responsive support, transparent requirement translations, clear sprint demonstrations, and timely issue resolution.</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education &amp; Credentials</h2>
+      <div class="edu-item">
+        <div>
+          <span class="edu-degree">Bachelor of Engineering (B.E.)</span> &nbsp;|&nbsp; 
+          <span class="edu-school">Priyadarshini Indira Gandhi College of Engineering, Nagpur</span>
+        </div>
+        <span class="edu-year">Graduated 2016</span>
+      </div>
+      <div class="edu-item">
+        <div>
+          <span class="edu-degree">Diploma in Electrical &amp; Power</span> &nbsp;|&nbsp; 
+          <span class="edu-school">Government Polytechnic College, Sakoli</span>
+        </div>
+        <span class="edu-year">Completed 2013</span>
+      </div>
+    </section>
+
+    <!-- Professional Strengths -->
+    <section>
+      <h2 class="section-title">Core Strengths &amp; Domain Expertise</h2>
+      <div class="strengths-row">
+        <span class="strength-tag">Analytical Problem Solving</span>
+        <span class="strength-tag">Business Requirement Discovery</span>
+        <span class="strength-tag">Executive Data Storytelling</span>
+        <span class="strength-tag">Stakeholder Demos &amp; Communication</span>
+        <span class="strength-tag">Financial Reconciliation &amp; Audit</span>
+        <span class="strength-tag">US Mortgage Domain Acumen</span>
+        <span class="strength-tag">Attention to Detail</span>
+        <span class="strength-tag">Agile / Scrum Collaboration</span>
+      </div>
+    </section>
+
+    <!-- Verification / Footer -->
+    <div class="resume-footer" style="margin-top: 25px;">
+      <span>Khushbu Pardhi — Senior Power BI Developer</span>
+      <span>LinkedIn: <a href="https://www.linkedin.com/in/khushbu-pardhi/">linkedin.com/in/khushbu-pardhi/</a></span>
+      <span>Page 2 of 2</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
