@@ -1,6 +1,6 @@
 # Khushbu Pardhi - Senior Power BI Developer Portfolio 🚀
 
-> **Live Portfolio:** [https://pardhikhushbu94-debug.github.io/](https://pardhikhushbu94-debug.github.io/)
+> **Live Portfolio:** [https://pardhikhushbu94-debug.github.io/khushbupardhipowerbiportfolio/](https://pardhikhushbu94-debug.github.io/khushbupardhipowerbiportfolio/)
 
 A modern, high-performance, and responsive portfolio webpage for **Khushbu Pardhi**, a Senior Power BI Developer & Semantic Modeling Specialist with 4+ years of dedicated BI engineering experience and 5+ years of prior US Mortgage financial risk underwriting experience.
 
